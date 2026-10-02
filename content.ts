@@ -80,6 +80,16 @@ export const content: Content = {
   experience: [
     {
       role: 'Mobile Engineer',
+      company: 'Swift Technology',
+      period: 'Jul 2026 – Present',
+      location: 'Kathmandu, Nepal',
+      type: 'work',
+      headline: 'Engineered real-time ATM cash-in tracking flows in Jetpack Compose using coroutines and StateFlow. Implemented cryptographic and reverse-engineering security hardening for legacy financial clients.',
+      impact: '100',
+      impactLabel: '% security compliance',
+    },
+    {
+      role: 'Mobile Engineer',
       company: 'Kathmandu Living Labs',
       period: 'Apr 2025 – Apr 2026',
       location: 'Kathmandu, Nepal',
@@ -143,6 +153,7 @@ export const content: Content = {
     { year: '2023', label: 'Self-Start & Open Source', sublabel: 'Began publishing Kotlin libraries, Android utilities, and open source projects on GitHub.', type: 'work' },
     { year: '2024', label: "Uncle Sam's Technologies", sublabel: "Android Developer Intern · Designed payment pipelines using Stripe SDK and reactive networking with Ktor & Coroutines.", type: 'work' },
     { year: '2025', label: 'Kathmandu Living Labs', sublabel: 'Mobile Engineer · Scaled mapping SDK integrations (MapLibre), real-time navigation layouts, and offline sync.', type: 'work' },
+    { year: '2026', label: 'Swift Technology', sublabel: 'Mobile Engineer · Built ATM cash-in workflows in Jetpack Compose and client-side security hardening.', type: 'work' },
   ],
 
   contact: {

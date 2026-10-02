@@ -133,7 +133,36 @@ function PaymentIllustration() {
   )
 }
 
+function SecurityIllustration() {
+  return (
+    <div className="relative flex items-center justify-center w-full h-20">
+      <svg viewBox="0 0 120 75" className="w-36 h-20" fill="none">
+        {/* Shield outline */}
+        <path
+          d="M 60 14 L 85 24 C 85 45, 60 62, 60 62 C 60 62, 35 45, 35 24 Z"
+          stroke="var(--orange)"
+          strokeWidth="2"
+          fill="var(--orange)"
+          fillOpacity="0.1"
+        />
+        {/* Lock Keyhole / Check */}
+        <circle cx="60" cy="33" r="4.5" fill="var(--ink)" fillOpacity="0.8" />
+        <rect x="58" y="35" width="4" height="8" rx="1" fill="var(--ink)" fillOpacity="0.8" />
+        <path d="M 20 38 L 35 38" stroke="var(--ink)" strokeWidth="1" strokeDasharray="3 3" opacity="0.3" />
+        <path d="M 85 38 L 100 38" stroke="var(--ink)" strokeWidth="1" strokeDasharray="3 3" opacity="0.3" />
+        <text x="12" y="68" fill="var(--orange)" fontSize="5.5" fontFamily="monospace" opacity="0.7">
+          Jetpack Compose
+        </text>
+        <text x="68" y="68" fill="var(--ink)" fontSize="5.5" fontFamily="monospace" opacity="0.4">
+          Client Hardening
+        </text>
+      </svg>
+    </div>
+  )
+}
+
 const ILLUSTRATIONS = [
+  SecurityIllustration,
   MapNavigationIllustration,
   PaymentIllustration,
 ]
@@ -203,9 +232,9 @@ export default function Experience() {
       </div>
 
       {/* Cards */}
-      <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full max-w-5xl">
+      <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full max-w-6xl">
         {content.experience.map((item, i) => {
-          const Illustration = ILLUSTRATIONS[i]
+          const Illustration = ILLUSTRATIONS[i] || PaymentIllustration
           return (
             <div
               key={i}
