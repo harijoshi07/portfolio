@@ -84,7 +84,7 @@ export const content: Content = {
       period: 'Jul 2026 – Present',
       location: 'Kathmandu, Nepal',
       type: 'work',
-      headline: 'Engineered real-time ATM cash-in tracking flows in Jetpack Compose using coroutines and StateFlow. Implemented cryptographic and reverse-engineering security hardening for legacy financial clients.',
+      headline: 'Built real-time ATM cash-in tracking for Japan Money Express in Jetpack Compose using coroutines and StateFlow. Implemented cryptographic and reverse-engineering security hardening for legacy financial clients, and architected multi-module Flutter remittance solutions.',
       impact: '100',
       impactLabel: '% security compliance',
     },
