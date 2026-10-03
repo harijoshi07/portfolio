@@ -1,0 +1,224 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure ATS parsing
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+% Consistent spacing: gap between entries within a section, and gap after a section
+\newcommand{\entrygap}{\vspace{5pt}}        % between experience entries
+\newcommand{\projgap}{\vspace{-8pt}}        % between project/leadership entries (matches \entrygap visually)
+\newcommand{\sectiongap}{\vspace{0pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Hari Joshi} \\ \vspace{2pt}
+    Kathmandu, Nepal (UTC +5:45) ~ $|$ ~ Open to remote \\ \vspace{2pt}
+    \small \raisebox{-0.1\height}\faPhone\ +977-9840046008 ~ $|$ ~ 
+    \href{mailto:harijoshi07x@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{harijoshi07x@gmail.com}} ~ $|$ ~ 
+    \href{https://linkedin.com/in/harijoshi07/}{\raisebox{-0.2\height}\faLinkedin\ \underline{Linkedin}} ~ $|$ ~
+    \href{https://github.com/harijoshi07}{\raisebox{-0.2\height}\faGithub\ \underline{Github}} ~ $|$ ~
+    \href{https://harijoshi07.github.io/portfolio}{\raisebox{-0.2\height}\faGlobe\ \underline{Portfolio}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\vspace{-2pt}
+\small{Mobile engineer with 2+ years of experience, skilled in Kotlin Multiplatform and Flutter, currently building fintech and remittance apps. Experience across maps, payments, and app security.}
+\vspace{4pt}
+\sectiongap
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Mobile Engineer}{Jul 2026 -- Present}
+      {Swift Technology}{Kathmandu, Nepal}
+      \resumeItemListStart
+        \resumeItem{Built a cash-in feature for Japan Money Express in Kotlin and Jetpack Compose: users scan a QR code at a bank ATM, deposit cash, and send the money to Nepal, using polling, coroutines, and Flows.}
+        \resumeItem{Hardened the legacy Java/XML Japan Money Express app with idle-session logout, reverse-engineering protection, VPN detection, screenshot prevention, and new-device detection.}
+        \resumeItem{Rebuilding IME London in Flutter as a multi-module master app (platform, product, and solution repositories) with a region-specific solution layer for markets such as London and Dubai.}
+      \resumeItemListEnd
+      \entrygap
+
+    \resumeSubheading
+      {Mobile Engineer}{Apr 2025 -- Apr 2026}
+      {Kathmandu Living Labs}{Kathmandu, Nepal}
+      \resumeItemListStart
+        \resumeItem{Built core features of the Baato Maps Android app, including navigation, search, and real-time location data visualization.}
+        \resumeItem{Built the main map interface with the MapLibre SDK and improved rendering performance.}
+        \resumeItem{Fixed bugs and refactored components for scalability, reducing the crash rate by 30\% in key user flows.}
+      \resumeItemListEnd
+      \entrygap
+
+    \resumeSubheading
+      {Android Developer Intern}{Aug 2024 -- Sep 2024}
+      {Uncle Sam's Technologies}{Remote}
+      \resumeItemListStart
+        \resumeItem{Integrated the Stripe Android SDK to implement a secure payment flow in the Billings App.}
+        \resumeItem{Built a WebView component to embed external web content in the app, and worked with Ktor on backend API integration.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\sectiongap
+
+%-----------PROJECTS-----------
+\section{Projects}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{IPO Share} $|$ \emph{Kotlin, Android SDK, MVVM, Retrofit, SQLite} $|$ \hspace{2pt}
+       \href{https://github.com/harijoshi07}{\faGithub}}{May 2026}
+    \resumeItemListStart
+        \resumeItem{Built an Android app for tracking IPO issues, checking allotment results, and monitoring portfolios in Nepal.}
+        \resumeItem{Built dashboard and allotment-checking screens, with local caching in SQLite and live results fetched through Retrofit.}
+        % UNCOMMENT ONCE THE REBUILD HAS STARTED:
+        % \resumeItem{Rebuilding the app with Kotlin Multiplatform and Compose Multiplatform to share code across Android and iOS.}
+    \resumeItemListEnd
+    \projgap
+
+    \resumeProjectHeading
+      {\textbf{Driving License Exam Nepal} $|$ \emph{Kotlin, Jetpack Compose, Material 3} $|$ \hspace{2pt}
+       \href{https://github.com/harijoshi07/Driving-License-Exam-App}{\faGithub} \hspace{5pt}
+       \href{https://play.google.com/store/apps/details?id=com.hari.drivinglicenseexamnepal_}{\faGooglePlay}}{Feb 2025}
+    \resumeItemListStart
+        \resumeItem{Built an offline-first Android app for Nepal's driving license exam preparation, using Jetpack Compose, Material Design 3, and Compose Navigation.}
+        \resumeItem{Published on Google Play with 1k+ downloads.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\sectiongap
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Kotlin, Java, Dart, SQL, C++, Python} \\
+     \vspace{3pt}
+     \textbf{Mobile}{: Android SDK, Jetpack Compose, XML Layouts, Kotlin Multiplatform (KMP), Compose Multiplatform (CMP), Flutter, Wear OS, MapLibre SDK} \\
+     \vspace{3pt}
+     \textbf{Architecture \& Libraries}{: MVVM, Multi-module Architecture, Coroutines \& Flows, Room, Retrofit, Hilt, Firebase} \\
+     \vspace{3pt}
+     \textbf{Testing \& DevOps}{: Automated Testing, CI/CD} \\
+     \vspace{3pt}
+     \textbf{Backend (Basic)}{: Ktor, Spring Boot} \\
+     \vspace{3pt}
+     \textbf{Developer Tools}{: Android Studio, IntelliJ IDEA, Git, Google Play Console, Figma, Postman, VS Code}
+    }}
+ \end{itemize}
+\vspace{-3pt}
+\sectiongap
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Thapathali Campus}{May 2021 -- May 2025}
+      {Bachelor of Electronics, Communication and Information Engineering}{Kathmandu, Nepal}
+  \resumeSubHeadingListEnd
+\vspace{3pt}
+\sectiongap
+
+%-----------LEADERSHIP---------------
+\section{Leadership}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Winner, Dristi 3.0 Hackathon} $|$ \emph{Kathmandu Engineering College}}{Jan 2025}
+    \resumeItemListStart
+        \resumeItem{Built an Android app teaching Nepali language, culture, and folklore to NRN children.}
+    \resumeItemListEnd
+    \projgap
+
+    \resumeProjectHeading
+      {\textbf{Secretary, Leo Club of Kathmandu-Aarambha Deurali} $|$ \emph{Lions Club}}{2024 -- 2025}
+    \resumeItemListStart
+        \resumeItem{Organized a blood donation program at Thapathali Campus with 120+ donors.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}

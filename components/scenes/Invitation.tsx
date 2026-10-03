@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { gsap } from '@/lib/gsap'
-import { content } from '@/content'
+import { content, prefixPath } from '@/content'
 import Image from 'next/image'
 
 const CONTACT_LINKS = [
@@ -53,7 +53,7 @@ export default function Invitation() {
   const sectionRef  = useRef<HTMLElement>(null)
   const profileRef  = useRef<HTMLDivElement>(null)
   const cardsRef    = useRef<HTMLDivElement>(null)
-  const ctaRef      = useRef<HTMLAnchorElement>(null)
+  const ctaRef      = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -136,14 +136,27 @@ export default function Invitation() {
       </div>
 
       {/* CTA */}
-      <a
+      <div
         ref={ctaRef}
-        href={`mailto:${content.contact.email}`}
-        className="opacity-0 px-8 py-4 bg-orange text-cream font-display font-bold text-lg rounded-full hover:scale-105 transition-transform duration-200"
-        data-cursor-grow=""
+        className="opacity-0 flex flex-wrap items-center justify-center gap-4"
       >
-        Let&apos;s talk →
-      </a>
+        <a
+          href={`mailto:${content.contact.email}`}
+          className="px-8 py-4 bg-orange text-cream font-display font-bold text-lg rounded-full hover:scale-105 transition-transform duration-200 shadow-md shadow-orange/10"
+          data-cursor-grow=""
+        >
+          Let&apos;s talk →
+        </a>
+        <a
+          href={prefixPath('/Hari_Joshi_Resume.pdf')}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-8 py-4 border border-ink/20 text-ink hover:border-orange hover:text-orange font-display font-bold text-lg rounded-full transition-colors duration-200"
+          data-cursor-grow=""
+        >
+          Resume (PDF) ↗
+        </a>
+      </div>
 
       <p className="font-mono text-xs text-gray/30 mt-12 tracking-widest">
         {new Date().getFullYear()} · {content.hero.name}

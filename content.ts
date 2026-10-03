@@ -58,7 +58,7 @@ export const content: Content = {
   hero: {
     name: 'Hari Joshi',
     title: 'Mobile Engineer · KMP Developer',
-    tagline: 'I build location-aware Android and Kotlin Multiplatform mobile products.',
+    tagline: 'I build location-aware and payment-focused Android and Kotlin Multiplatform mobile products.',
   },
 
   stakes: {
@@ -73,7 +73,7 @@ export const content: Content = {
 
   about: {
     photo: prefixPath('/images/favicons.jpeg'),
-    bio: "I am a mobile engineer based in Kathmandu, Nepal, specializing in building premium Android apps and Kotlin Multiplatform (KMP) shared codebases. My expertise spans MapLibre SDK location services, offline-first architectures with Room DB, Stripe payments integration, and high-fidelity declarative layouts in Jetpack Compose. I am passionate about release polish, clean code architecture, and optimization for performance and reliability in real-world user flows.",
+    bio: "I am a mobile engineer based in Kathmandu, Nepal, with 2+ years of experience specializing in building premium Android apps, fintech and remittance workflows, and Kotlin Multiplatform (KMP) shared codebases. My expertise spans MapLibre SDK location services, offline-first architectures with Room DB, Stripe payments and ATM cash-in workflows, and high-fidelity declarative layouts in Jetpack Compose. I am passionate about release polish, clean code architecture, and optimization for performance and reliability in real-world user flows.",
     tags: ['Kotlin', 'KMP', 'Compose', 'Firebase', 'MapLibre SDK', 'Room DB', 'Ktor', 'Stripe SDK', 'Coroutines', 'MVVM', 'Gradle'],
   },
 
